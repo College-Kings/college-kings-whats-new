@@ -6,54 +6,53 @@ init python:
 default persistent.previous_whats_new = None
 
 screen whats_new():
-    modal True
     style_prefix "whats_new"
 
     python:
         with open(os.path.join(config.gamedir, "whats_new", "whats-new.txt"), "r") as f:
             file_contents = f.read()
 
-        title, learn_more_link, description = re.findall('".+"', file_contents)
+        matches = list(re.finditer('"', file_contents))
+        title = file_contents[matches[0].end() : matches[1].start()]
+        learn_more_link = file_contents[matches[2].end() : matches[3].start()]
+        description = file_contents[matches[4].end() : matches[5].start()]
 
     add "darker_80"
 
-    frame:
-        background Frame("gui/whats-new/background.webp")
-        xysize (500, 758)
-        align (0.5, 0.5)
-        padding (20, 20)
-
-        viewport:
-            mousewheel True
-            draggable True
-            align (0.5, 0.5)
-
-            vbox:
-                spacing 10
-                text "What's New:" xalign 0.5 bold True
-                text description size 18
-
-                if achievement.steam and achievement.steam.dlc_installed(1929620):
-                    null height 50
-
-                    text "Deluxe Content:"
-                    text "How to get DLC content" bold True
-                    text "1. Right click \"College Kings 2\" in your Steam Library and select \"Properties\".\n2. Under the \"Local Files\" tab, select \"Browse Local Files\".\n3. Within the local files, locate a folder called \"deluxe_content\."
-                    textbutton "Or Click HERE":
-                        action Function(open_deluxe_folder)
-
-                    null height 25
-
     button action Hide()
 
-    textbutton "Exit":
+    button:
+        background "whats_new/images/background.png"
+        xysize (1412, 776)
+        align (0.5, 0.5)
+        padding (100, 100)
         action Hide()
-        xpos 20
-        yalign 1.0
-        yoffset -20
-        text_size 100
-        text_bold True
 
-    on "hide" action SetVariable("persistent.previous_whats_new", dialogue)
+        textbutton "X":
+            action Hide()
+            xalign 1.0
+            text_size 42
 
-style whats_new_text is text
+        vbox:
+            yalign 1.0
+            xsize 625
+            spacing 10
+
+            text title:
+                style "whats_new_title"
+            text description
+
+        imagebutton:
+            idle "whats_new/images/learn_more.png"
+            action OpenURL(learn_more_link)
+            align (1.0, 1.0)
+
+    on "hide" action SetVariable("persistent.previous_whats_new", hash(file_contents))
+
+style whats_new_title is text:
+    font "fonts/Montserrat-ExtraBold.ttf"
+    size 40
+
+style whats_new_text is text:
+    font "fonts/Effra-Regular.ttf"
+    size 23
