@@ -1,5 +1,5 @@
 title = "Our New Game: Unscripted"
-learn_more_link = "https://www.google.com"
+learn_more_link = "steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/"
 description = "Calling all CK lovers!
 We are beyond excited to share our new game Unscripted with our community and we don’t want you to miss out.
 Play the lead in a romantic comedy where you decide the fate of your relationships. Love, sex and a ton of hilarious adventures await!
