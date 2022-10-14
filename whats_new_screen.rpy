@@ -1,8 +1,3 @@
-init python:
-    def get_file_contents(file_path: str):
-        with open(file_path, "r") as f:
-            return f.read()
-
 default persistent.previous_whats_new = None
 
 screen whats_new():
