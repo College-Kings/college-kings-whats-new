@@ -20,7 +20,7 @@ screen whats_new():
         background "whats_new/images/background.png"
         xysize (1412, 776)
         align (0.5, 0.5)
-        padding (100, 100)
+        padding (75, 75)
         action Hide()
 
         textbutton "X":
@@ -31,7 +31,7 @@ screen whats_new():
         vbox:
             yalign 1.0
             xsize 625
-            spacing 10
+            spacing 5
 
             text title:
                 style "whats_new_title"
@@ -42,7 +42,7 @@ screen whats_new():
             action OpenURL(learn_more_link)
             align (1.0, 1.0)
 
-    on "hide" action SetVariable("persistent.previous_whats_new", hash(file_contents))
+    on "hide" action SetVariable("persistent.previous_whats_new", file_contents)
 
 style whats_new_title is text:
     font "fonts/Montserrat-ExtraBold.ttf"
@@ -50,4 +50,4 @@ style whats_new_title is text:
 
 style whats_new_text is text:
     font "fonts/Effra-Regular.ttf"
-    size 23
+    size 18
