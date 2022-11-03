@@ -1,5 +1,5 @@
-title = "Our New Game: Unscripted"
-learn_more_link = "steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/"
+title = "Our Next Episode: College Kings Episode 2"
+learn_more_link = "steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party/"
 description = "Calling all CK lovers!
 
 We are beyond excited to share our new game Unscripted with our community and we don’t want you to miss out.
