@@ -1,11 +1,6 @@
-title = "Our Next Episode: College Kings Episode 2"
+title = "New Episode 'The Pool Party' OUT NOW"
 learn_more_link = "steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party/"
-description = "New Episode 'The Pool Party' OUT NOW
-
-Prepare yourself to get wet!
-
+description = "Prepare yourself to get wet!
 The hotly anticipated second episode of College Kings 2 is here.
-
 This episode, the plot goes off the rails with high-impact choices, wild sex scenes, and twists you'll never see coming. Don't forget to bring your trunks and suntan lotion!
-
 Strap in for a bigger and bolder College Kings experience, which starts with an epic pool party."
