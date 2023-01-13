@@ -4,7 +4,9 @@ screen whats_new():
     style_prefix "whats_new"
 
     python:
-        with open(os.path.join(config.gamedir, "whats_new", "whats-new.txt"), "r") as f:
+        whats_new_file_path = [file for file in renpy.list_files() if file == "whats_new/whats-new.txt"][0]
+
+        with renpy.file(whats_new_file_path, "utf-8") as f:
             file_contents = f.read()
 
         matches = list(re.finditer('"', file_contents))
