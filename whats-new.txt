@@ -1,10 +1,10 @@
-title = "Play Unscripted's Free Demo Today"
-button_text = "Play Now"
+title = "Our New Game: Unscripted"
+button_text = "Wishlist Now"
 button_link = "steam://openurl/https://store.steampowered.com/app/2156300/Unscripted/"
-description = "Steam Next Fest has started and our upcoming game Unscripted is participating!
+description = "Calling all CK lovers!
 
-Play our free demo of the first 20 minutes of the game from now until Feb 13th.
+We are beyond excited to share our new game Unscripted with our community and we don't want you to miss out.
 
-In Unscripted you get play the lead in a romantic comedy where you decide the fate of your relationships. Love, sex and a ton of hilarious adventures await.
+Play the lead in a romantic comedy where you decide the fate of your relationships. Love, sex and a ton of hilarious adventures await!
 
-If you love College Kings, you'll love Unscripted, so give it a try and don't forget to wishlist if you enjoy the demo!"
+If you love College Kings, you'll love Unscripted, so come join the ride and get the game as soon as it's out!"
