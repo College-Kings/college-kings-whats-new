@@ -1,19 +1,10 @@
 default persistent.previous_whats_new = None
 
-screen whats_new():
+screen whats_new(data=""):
     style_prefix "whats_new"
 
     python:
-        whats_new_file_path = [file for file in renpy.list_files() if file == "whats_new/whats-new.txt"][0]
-
-        with renpy.file(whats_new_file_path, "utf-8") as f:
-            file_contents = f.read()
-
-        matches = list(re.finditer('"', file_contents))
-        title = file_contents[matches[0].end() : matches[1].start()]
-        button_text = file_contents[matches[2].end() : matches[3].start()]
-        button_link = file_contents[matches[4].end() : matches[5].start()]
-        description = file_contents[matches[6].end() : matches[7].start()]
+        title, button_text, button_link, description = re.findall(r'"(.*?)"', data, re.DOTALL)
 
     add "darker_80"
 
@@ -51,8 +42,8 @@ screen whats_new():
                 style "whats_new_button_text"
                 align (0.5, 0.5)
 
-    on "hide" action SetVariable("persistent.previous_whats_new", file_contents)
-
+    on "hide" action SetVariable("persistent.previous_whats_new", data)
+    
 style whats_new_title is text:
     font "fonts/Montserrat-ExtraBold.ttf"
     size 40
