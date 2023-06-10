@@ -4,4 +4,4 @@ button_link = "steam://openurl/https://store.steampowered.com/app/2267960/Colleg
 description = "Episode 3 is finally here!
 Entirely written by Undergrad Steve, CK2 Ep3 “Back To Basics” aims to bring back everything you love about CK.
 
-Prove yourself in a major fighting tournament, decide the fate of your frat when a new danger threatens to destroy everything you’ve worked for, and experience the highs and lows of dating, love and sex with all of your favorite CK girls."
+Prove yourself in a major fighting tournament, decide the fate of your frat when a new danger threatens to destroy everything you've worked for, and experience the highs and lows of dating, love and sex with all of your favorite CK girls."
