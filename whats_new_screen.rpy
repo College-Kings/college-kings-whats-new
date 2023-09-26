@@ -43,7 +43,7 @@ screen whats_new(data=""):
                 align (0.5, 0.5)
 
     on "hide" action SetVariable("persistent.previous_whats_new", data)
-    
+
 style whats_new_title is text:
     font "fonts/Montserrat-ExtraBold.ttf"
     size 40
