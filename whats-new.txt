@@ -1,6 +1,6 @@
 title = "Reworked Episode: Episode 2 'The Pool Party' Available Now"
 button_text = "Play Now"
-button_link = "steam://openurl/https://https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party/"
+button_link = "steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party/"
 description = "Episode 2 is back and better than ever!
 'The Pool Party' Reworked continues the story with new routes, new content, and more freedom than ever before!
 
