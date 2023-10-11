@@ -12,9 +12,9 @@ screen whats_new(data=""):
 
     button:
         background "whats_new/images/background.png"
-        xysize (1412, 776)
+        xysize renpy.load_surface("whats_new/images/background.png").get_size()
         align (0.5, 0.5)
-        padding (75, 75)
+        padding (50, 50)
         action Hide()
 
         textbutton "X":
@@ -24,7 +24,7 @@ screen whats_new(data=""):
 
         vbox:
             yalign 1.0
-            xsize 625
+            xsize 0.65
             spacing 5
 
             text title:
@@ -47,10 +47,12 @@ screen whats_new(data=""):
 style whats_new_title is text:
     font "fonts/Montserrat-ExtraBold.ttf"
     size 40
+    outlines [(0.5, "#000")]
 
 style whats_new_text is text:
     font "fonts/Effra-Regular.ttf"
-    size 18
+    size 22
+    outlines [(0.1, "#000")]
 
 style whats_new_button_text is text:
     font "fonts/BebasNeue-Regular.ttf"
