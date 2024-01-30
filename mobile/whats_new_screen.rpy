@@ -1,5 +1,3 @@
-default persistent.previous_whats_new = None
-
 screen whats_new(data=""):
     style_prefix "whats_new"
     variant "mobile"
