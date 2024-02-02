@@ -1,7 +1,0 @@
-title = "Reworked Episode: Episode 2 'The Pool Party' Available Now"
-button_text = "Play Now"
-button_link = "steam://openurl/https://store.steampowered.com/app/2100540/College_Kings_2__Episode_2_The_Pool_Party/"
-description = "Episode 2 is back and better than ever!
-'The Pool Party' Reworked continues the story with new routes, new content, and more freedom than ever before!
-
-With both the Apes and Wolves receiving warnings from SVC, and the rise of the mysterious social media page 'SVC Rejects' tensions on campus are at an all-time high. Work with the revived Social Planning Committee to throw the ultimate pool party and unite the campus, and spend time with all of your favourite CK girls with all new content to explore!"
