@@ -8,8 +8,8 @@ screen whats_new(data):
     button action Hide()
 
     button:
-        background "whats_new/images/background.png"
-        xysize renpy.load_surface("whats_new/images/background.png").get_size()
+        background "whats_new_background"
+        xysize get_registered_image_size("whats_new_background")
         align (0.5, 0.5)
         padding data.get("frame_padding", (50, 50))
         action Hide()
@@ -30,8 +30,8 @@ screen whats_new(data):
             text data["description"]
 
         button:
-            background "whats_new/images/button_background.png"
-            hover_background "whats_new/images/button_background_hover.png"
+            background "whats_new_button_background"
+            hover_background "whats_new_button_background_hover"
             action OpenURL(data["button_link"])
             align (1.0, 1.0)
             xysize (332, 124)
@@ -40,7 +40,8 @@ screen whats_new(data):
                 style "whats_new_button_text"
                 align (0.5, 0.5)
 
-    on "hide" action SetVariable("persistent.previous_whats_new", data)
+    on "hide" action SetField(persistent "previous_whats_new", data)
+
 
 style whats_new_title is text:
     font "fonts/Montserrat-ExtraBold.ttf"
