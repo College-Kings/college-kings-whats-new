@@ -1,19 +1,15 @@
-screen whats_new(data=""):
+screen whats_new(data):
     style_prefix "whats_new"
-    variant "mobile"
-
-    python:
-        title, button_text, button_link, description = re.findall(r'"(.*?)"', data, re.DOTALL)
 
     add "darker_80"
 
     button action Hide()
 
     button:
-        background "whats_new/images/background.png"
-        xysize renpy.load_surface("whats_new/images/background.png").get_size()
+        background "whats_new_background"
+        xysize get_registered_image_size("whats_new_background")
         align (0.5, 0.5)
-        padding (50, 50)
+        padding data.get("frame_padding", (50, 50))
         action Hide()
 
         textbutton "X":
@@ -23,11 +19,23 @@ screen whats_new(data=""):
 
         vbox:
             yalign 1.0
-            xsize 0.65
+            offset data.get("text_offset", (0, 0))
+            xsize data.get("xsize", 0.65)
             spacing 5
 
-            text title:
+            text data["title"]:
                 style "whats_new_title"
-            text description
+            text data["description"]
 
-    on "hide" action SetVariable("persistent.previous_whats_new", data)
+        button:
+            background "whats_new_button_background"
+            hover_background "whats_new_button_background_hover"
+            action OpenURL(data["button_link"])
+            align (1.0, 1.0)
+            xysize (332, 124)
+
+            text data["button_text"]:
+                style "whats_new_button_text"
+                align (0.5, 0.5)
+
+    on "hide" action SetField(persistent, "previous_whats_new", data)
