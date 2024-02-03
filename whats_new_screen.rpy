@@ -40,7 +40,7 @@ screen whats_new(data):
                 style "whats_new_button_text"
                 align (0.5, 0.5)
 
-    on "hide" action SetField(persistent "previous_whats_new", data)
+    on "hide" action SetField(persistent, "previous_whats_new", data)
 
 
 style whats_new_title is text:
